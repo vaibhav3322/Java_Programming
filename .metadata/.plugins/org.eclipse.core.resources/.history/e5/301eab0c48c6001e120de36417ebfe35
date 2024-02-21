@@ -1,0 +1,17 @@
+package Singleton_Design_Pattern;
+
+public class DemoSingleton {
+	
+	
+	
+	private DemoSingleton()
+	{
+		
+	}
+	
+	public DemoSingleton getDemo()
+	{
+		return DemoSingleton ;
+	}
+
+}

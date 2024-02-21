@@ -1,0 +1,20 @@
+package com.project.Java8code;
+
+public class Student {
+	
+	private int sid;
+	private String sname;
+	private double smarks;
+	private String scity;
+	
+	public Student(int sid, String sname, double smarks, String scity) {
+		super();
+		this.sid = sid;
+		this.sname = sname;
+		this.smarks = smarks;
+		this.scity = scity;
+	}
+	
+	
+
+}

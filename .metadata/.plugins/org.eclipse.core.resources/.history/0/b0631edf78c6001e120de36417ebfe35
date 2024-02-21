@@ -1,0 +1,41 @@
+package com.project.Java8code;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class TestStudent {
+
+	public static void main(String[] args) {
+
+		List<Student> stu = Arrays.asList(new Student(1, "Akshay", 200, "Pune","M"),
+				new Student(2, "Vaibhav", 400.57, "Pune", "M"), 
+				new Student(3, "Abhijeet", 300, "Latur","M"),
+				new Student(4, "Mahesh", 500.67, "Sambhajinagar","M"), 
+				new Student(4, "Shweta", 600, "Washim","F"));
+
+		List<Student> marksHigherThan300 = stu.stream().filter(s -> s.getSmarks() > 300)
+				      .collect(Collectors.toList());
+		System.out.println("List Of Students having marks greater than 300 :"+marksHigherThan300);
+		
+		System.out.println("*********************************************************************************************************************");
+
+		//get student ids who belongs to Pune
+		
+		List<Integer> idsOfPuneStu = stu.stream().filter(n -> n.getScity().equals("Pune")).map(Student::getSid).collect(Collectors.toList());
+		System.out.println("List of Students from Pune City with their Ids" +idsOfPuneStu);
+		
+		System.out.println("*********************************************************************************************************************");
+		//get students who belongs to pune and increase their marks with 100
+		
+		List<Double> increMarksBy100 = stu.stream().filter(c -> c.getScity().equalsIgnoreCase("Pune"))
+				.map( c ->(c.getSmarks()+ 100)).collect(Collectors.toList());
+		
+		System.out.println("Pune City Student Marks Increses by 100"+increMarksBy100);
+		
+		System.out.println("*********************************************************************************************************************");
+		//
+		
+	}
+
+}

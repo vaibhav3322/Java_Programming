@@ -1,0 +1,15 @@
+package Singleton_Design_Pattern;
+
+public class TestDemoSingleton {
+	
+	public static void main(String[] args) {
+		
+		DemoSingleton s1 = DemoSingleton.getDemo();
+		
+		
+		DemoSingleton s2 = DemoSingleton.getDemo();
+		
+		
+	}
+
+}

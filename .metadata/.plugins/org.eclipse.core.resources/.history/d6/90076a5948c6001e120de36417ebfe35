@@ -1,0 +1,22 @@
+package Singleton_Design_Pattern;
+
+public class DemoSingleton {
+	
+	 private static DemoSingleton demoSingleton;
+	
+	private DemoSingleton()
+	{
+		
+	}
+	
+	public static DemoSingleton getDemo()
+	{
+		if (demoSingleton == null) {
+			
+			demoSingleton = new DemoSingleton();
+			
+		}
+		return demoSingleton ;
+	}
+
+}

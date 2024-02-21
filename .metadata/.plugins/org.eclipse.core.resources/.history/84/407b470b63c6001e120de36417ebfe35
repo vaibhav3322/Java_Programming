@@ -1,0 +1,23 @@
+package Factory_Design_Pattern;
+
+public class NotificationFactory {
+
+	public Notification createNotification(String channel) {
+		if (channel == null || channel.isEmpty())
+			return null;
+
+		switch (channel) {
+		case "SMS":
+			return new SMSNotification();
+		case "EMAIL":
+			return new SMSNotification();
+		case "PUSH":
+			return new SMSNotification();
+
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + channel);
+		}
+
+	}
+
+}

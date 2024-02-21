@@ -1,0 +1,10 @@
+package com.project.Java8code;
+
+public class Student {
+	
+	private int sid;
+	private String sname;
+	private double smarks;
+	private String scity;
+
+}
